@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Tracker | SootheWinds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">SootheWinds</a>
+    <div class="nav-links">
+      <a href="talk.html">Talk to Us</a>
+      <a href="mood.html">Track Mood</a>
+      <a href="stress.html">Stress Reliever</a>
+      <a href="login.html">Login / Sign Up</a>
+      <select class="lang-dropdown">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+      <button class="theme-toggle">☀</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Mood Tracker 🌿</h1>
+    <p>Click a date to log your mood, notes, and audio.</p>
+  </section>
+
+  <!-- Calendar -->
+<section class="calendar-section">
+  <div class="calendar-filters">
+    <select id="monthFilter"></select>
+    <select id="yearFilter"></select>
+  </div>
+
+  <div class="calendar-header">
+    <button id="prevMonth">←</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonth">→</button>
+  </div>
+
+  <div class="calendar-weekdays">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div id="calendar" class="calendar-days"></div>
+</section>
+
+<!-- Mood Modal -->
+<div id="moodModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="selectedDate">Date</h3>
+    <select id="moodSelect">
+      <option value="">Select Mood</option>
+      <option value="happy">😊 Happy</option>
+      <option value="sad">😢 Sad</option>
+      <option value="angry">😡 Angry</option>
+      <option value="anxious">😰 Anxious</option>
+      <option value="relaxed">😌 Relaxed</option>
+    </select>
+    <textarea id="moodNotes" placeholder="Write your notes..."></textarea>
+    <button id="saveMood" class="btn">Save Mood</button>
+  </div>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SootheWinds | Made with 💙 for students</p>
+  </footer>
+
+  <div class="hotline-container">
+  <button class="hotline-btn" title="Emergency Hotline">📞</button>
+  <div class="hotline-popup">
+    <p>Call: +91 12345 67890</p>
+  </div>
+</div>
+
+  <script src="mood.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
