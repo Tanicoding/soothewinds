@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>mole</title>  
+<style>
+/* ===== Hero Section ===== */
+.hero {
+  background: rgba(25, 118, 210, 0.15); /* light blue overlay */
+  text-align: center;
+  padding: 4rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary, #6B3F69);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ===== Features / Games Section ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 25px;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr; /* stack on small screens */
+  }
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.feature-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary, #6B3F69);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.feature-card .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary, #6B3F69);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feature-card .btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* ===== Dark Mode Support ===== */
+body.dark .hero {
+  background: rgba(43, 20, 43, 0.85);
+  color: #fff;
+}
+
+body.dark .feature-card {
+  background-color: #2b1f2b;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+body.dark .feature-card .btn {
+  background-color: #90caf9;
+  color: #000;
+}
+
+body.dark .feature-card .btn:hover {
+  background-color: #64b5f6;
+}
+
+
+</style>
+   <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">SootheWinds</a>
+    <div class="nav-links">
+      <a href="talk.html">Talk to Us</a>
+      <a href="mood.html">Track Mood</a>
+      <a href="stress.html">Stress Reliever</a>
+      <a href="login.html">Login / Sign Up</a>
+      <select class="lang-dropdown">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+      <button class="theme-toggle">☀</button>
+    </div>
+  </nav>
+      <div class="game-container">
+       <h1>Whack-A-Mole</h1>
+       <div class="header">
+           <div id="score">Score: 0</div>
+           <div id="timer">Time: 30</div>
+       </div>
+       <div class="game-board">
+           <div class="hole" data-index="0"></div>
+           <div class="hole" data-index="1"></div>
+           <div class="hole" data-index="2"></div>
+           <div class="hole" data-index="3"></div>
+           <div class="hole" data-index="4"></div>
+           <div class="hole" data-index="5"></div>
+           <div class="hole" data-index="6"></div>
+           <div class="hole" data-index="7"></div>
+           <div class="hole" data-index="8"></div>
+       </div>
+       <button id="start-btn">Start Game</button>
+   </div> style
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SootheWinds | Made with 💙 for students</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+ <!-- Hotline Button -->
+<!-- Hotline Button -->
+<div class="hotline-container">
+  <button class="hotline-btn" title="Emergency Hotline">📞</button>
+  <div class="hotline-popup">
+    <p>Call: +91 12345 67890</p>
+  </div>
+</div>
+</body>
+</html>
