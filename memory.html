@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Memory Match</title>  
+<style>
+  /* Memory Match Container */
+.game-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  background-color: #fdf6e3; /* soft beige */
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-container h1 {
+  font-size: 2.5rem;
+  color: #6B3F69; /* primary color */
+  margin-bottom: 20px;
+}
+
+.game-container #message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Game Board Grid */
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db; /* back of card */
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.card-front {
+  background-color: #2ecc71; /* front of card */
+  transform: rotateY(180deg);
+}
+
+/* Dark Mode Support */
+body.dark .game-container {
+  background-color: #2b1f2b;
+  color: #e1ecf4;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark .card {
+  background-color: #4a2b48;
+}
+
+body.dark .card-front {
+  background-color: #90caf9;
+  color: #000;
+}
+
+</style>
+   <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+     <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">SootheWinds</a>
+    <div class="nav-links">
+      <a href="talk.html">Talk to Us</a>
+      <a href="mood.html">Track Mood</a>
+      <a href="stress.html">Stress Reliever</a>
+      <a href="login.html">Login / Sign Up</a>
+      <select class="lang-dropdown">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+      <button class="theme-toggle">☀</button>
+    </div>
+  </nav>
+   <div class="game-container">
+       <h1>Memory Match</h1>
+       <div id="game-board"></div>
+       <p id="message">Match the pairs to win! 🧠</p>
+   </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SootheWinds | Made with 💙 for students</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+ <!-- Hotline Button -->
+<!-- Hotline Button -->
+<div class="hotline-container">
+  <button class="hotline-btn" title="Emergency Hotline">📞</button>
+  <div class="hotline-popup">
+    <p>Call: +91 12345 67890</p>
+  </div>
+</div>
+</body>
+</html>
