@@ -1,0 +1,915 @@
+:root {
+  --bg-light: #f5faff;
+  --bg-dark: #1c1f26;
+  --text-light: black;
+  --text-dark: #e1ecf4;
+  --primary: #6B3F69;
+  --secondary: #DDC3C3;
+  --accent: #FFFBDE;
+}
+
+/* ===== Body ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1497989462347-f3fdb55caa59?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHwxMzc2Mjd8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark .navbar {
+  background: #4a2b48;
+}
+
+body.dark .nav-links a {
+  color: var(--text-dark);
+}
+
+body.dark .hero {
+  background: rgba(43, 20, 43, 0.85);
+}
+
+body.dark .features {
+  background: rgba(43, 20, 43, 0.6);
+}
+
+body.dark .feature-card {
+  background: #2b1f2b;
+  color: var(--text-dark);
+}
+
+body.dark footer {
+  background: #4a2b48;
+}
+
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* ===== Theme Toggle ===== */
+.theme-toggle {
+  background: var(--secondary);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  transform: rotate(15deg) scale(1.05);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: rgba(107, 63, 105, 0.75);
+  color: white;
+  text-align: center;
+  padding: 2rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  margin-top:1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: var(--secondary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+/* ===== Features Section ===== */
+.features {
+  padding: 4rem 2rem;
+  background: rgba(255, 251, 222, 0.6);
+  text-align: center;
+}
+
+.features h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hotline-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 200;
+}
+
+.hotline-btn {
+  background: #FF4C4C;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.hotline-btn:hover {
+  background: #ff1a1a;
+  transform: scale(1.1);
+}
+
+.hotline-popup {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: white;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-weight: bold;
+  min-width: 150px;
+  text-align: center;
+}
+
+.hotline-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 20px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+
+/* ===== Chat Section ===== */
+.chat-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: rgba(255, 251, 222, 0.6);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.chat-section h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.chat-section p {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.chat-box {
+  background: white;
+  height: 400px;
+  border-radius: 12px;
+  overflow-y: auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.chat-box .message {
+  background: var(--secondary);
+  color: var(--primary);
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  align-self: flex-start;
+  max-width: 70%;
+}
+
+.chat-box .message.user {
+  background: var(--accent);
+  color: var(--primary);
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.chat-input button:hover {
+  background: #533052;
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: var(--accent);
+  text-decoration: none; /* removes underline */
+}
+
+
+.calendar-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  background: rgba(235, 245, 255, 0.8); /* card-like background */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Month/Year Filters */
+.calendar-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-filters select {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: var(--accent);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.calendar-filters select:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h2 {
+  color: var(--primary);
+}
+
+.calendar-header button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendar-weekdays, .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-weekdays div {
+  font-weight: bold;
+}
+
+.calendar-days .day {
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 251, 222, 0.6);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.calendar-days .day:hover {
+  background: var(--secondary);
+  transform: scale(1.05);
+}
+
+.calendar-section {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  background: rgba(235, 245, 255, 0.8); /* card-like background */
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Month/Year Filters */
+.calendar-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-filters select {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: var(--accent);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.calendar-filters select:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+/* Mood Modal */
+.modal {
+  display: block; /* keep block to allow positioning */
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 350px;
+  background: var(--primary);
+  color: white;
+  padding: 2rem;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.3);
+  border-radius: 16px 0 0 16px;
+  z-index: 200;
+  overflow-y: auto;
+  transform: translateX(100%); /* start off-screen */
+  transition: transform 0.3s ease;
+}
+
+/* Show modal */
+.modal.show {
+  transform: translateX(0);
+}
+
+/* Close button */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Modal form elements */
+.modal select, 
+.modal textarea, 
+.modal button {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.modal textarea {
+  min-height: 100px;
+  border-radius: 12px;
+  border: none;
+  padding: 0.8rem;
+  resize: vertical;
+}
+
+/* Calendar Section Dark Mode */
+body.dark .calendar-section {
+  background: rgba(43, 20, 43, 0.85); /* darker card background */
+  color: var(--text-dark);
+}
+
+body.dark .calendar-header h2,
+body.dark .calendar-weekdays div,
+body.dark .calendar-days .day {
+  color: var(--text-dark);
+}
+
+body.dark .calendar-header button {
+  background: #533052; /* dark purple buttons */
+  color: var(--text-dark);
+}
+
+body.dark .calendar-filters select {
+  background: #533052;
+  color: var(--text-dark);
+  border: 1px solid #6B3F69;
+}
+
+body.dark .calendar-days .day {
+  background: rgba(107, 63, 105, 0.6); /* darker day blocks */
+}
+
+body.dark .calendar-days .day:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+
+/* ===== Stress Reliever Section ===== */
+.stress-reliever-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 251, 222, 0.7); /* light card background */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.stress-reliever-section h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Feature Cards */
+.stress-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.stress-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.stress-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.stress-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.stress-card .btn {
+  background: var(--secondary);
+  color: var(--primary);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.stress-card .btn:hover {
+  background: var(--accent);
+}
+
+/* ===== Dark Mode ===== */
+body.dark .stress-reliever-section {
+  background: rgba(43, 20, 43, 0.85); /* darker card background */
+  color: var(--text-dark);
+}
+
+body.dark .stress-card {
+  background: #2b1f2b;
+  color: var(--text-dark);
+}
+
+body.dark .stress-card p {
+  color: var(--text-dark);
+}
+
+body.dark .stress-card .btn {
+  background: #533052;
+  color: var(--text-dark);
+}
+
+body.dark .stress-card .btn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+
+
+
+
+
+
+
+/* ===== Auth Section ===== */
+.auth-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 2rem;               /* space between login and sign-up */
+  flex-wrap: wrap;          /* stack on small screens */
+  margin: 4rem auto;
+  max-width: 1000px;
+}
+
+/* Individual form cards */
+.auth-card {
+  flex: 1 1 400px;          /* grow/shrink, min width 400px */
+  max-width: 450px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.auth-card h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-card input {
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.auth-card .btn {
+  padding: 0.8rem;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: var(--secondary);
+  color: var(--primary);
+  transition: background 0.3s;
+}
+
+.auth-card .btn:hover {
+  background: var(--accent);
+}
+
+/* ===== Dark Mode for Auth ===== */
+body.dark .auth-section {
+  background: rgba(28, 31, 38, 0.7);
+}
+
+body.dark .auth-card {
+  background: rgba(43, 20, 43, 0.85);
+  color: var(--text-dark);
+}
+
+body.dark .auth-card input {
+  background: #2b1f2b;
+  color: var(--text-dark);
+  border: 1px solid #533052;
+}
+
+body.dark .auth-card input:focus {
+  border-color: var(--secondary);
+}
+
+body.dark .auth-card .btn {
+  background: #533052;
+  color: var(--text-dark);
+}
+
+body.dark .auth-card .btn:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+
+/* Language Dropdown - Navbar */
+.lang-dropdown {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background: var(--secondary);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.lang-dropdown:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* Dark Mode */
+body.dark .lang-dropdown {
+  background: #533052;
+  color: var(--text-dark);
+  border: 1px solid var(--secondary);
+}
+
+
+/* Guided Relaxation Options */
+.relax-options {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.relax-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.relax-option {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.relax-option:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.relax-option h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+}
+
+.relax-option p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Dark Mode */
+body.dark .relax-option {
+  background: #2b1f2b;
+  color: var(--text-dark);
+}
+
+
+
+/* 🌿 Guided Relaxation Styles */
+
+/* Section styling */
+.guided-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #f5f8fc, #e8edf7);
+  min-height: 70vh;
+}
+
+/* Guided content boxes */
+.guide-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.guide-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* Headings */
+.guide-box h2 {
+  font-size: 1.8rem;
+  color: #6B3F69;
+  margin-bottom: 1.2rem;
+}
+
+/* Text */
+.guide-box p, 
+.guide-box ol, 
+.guide-box li {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Ordered list (for breathing steps etc.) */
+.guide-box ol {
+  text-align: left;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+}
+
+.guide-box li {
+  margin-bottom: 0.6rem;
+}
+
+/* Buttons (general) */
+.btn {
+  display: inline-block;
+  background: #6B3F69;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background: #583358;
+}
+
+/* Audio & video embeds */
+audio, iframe {
+  margin-top: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* 🎨 Dark mode adjustments */
+body.dark-mode .guided-section {
+  background: linear-gradient(to bottom, #2b2b3c, #1c1c29);
+}
+
+body.dark-mode .guide-box {
+  background: #2e2e40;
+  color: #f1f1f1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .guide-box h2 {
+  color: #d9a7ff;
+}
+
+body.dark-mode .guide-box p,
+body.dark-mode .guide-box li {
+  color: #ddd;
+}
+
+body.dark-mode .btn {
+  background: #d9a7ff;
+  color: #1c1c29;
+}
+
+body.dark-mode .btn:hover {
+  background: #b97fe0;
+}
