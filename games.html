@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SootheWinds | Games</title>
+<style>
+  /* ===== Hero Section ===== */
+.hero {
+  background: rgba(25, 118, 210, 0.15); /* light blue overlay */
+  text-align: center;
+  padding: 4rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary, #6B3F69);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* ===== Features / Games Section ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  padding: 50px 20px;
+  max-width: 1000px;
+  margin: 50px auto; /* adds top & bottom spacing */
+  background-color: #f5f0e6; /* beige-ish background */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+@media screen and (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
+    margin: 30px 20px;
+  }
+}
+
+/* Dark Mode */
+body.dark .features {
+  background-color: #2c2430; /* dark beige / muted */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+
+.feature-card {
+  background-color: #fff;
+  border-top: 4px solid var(--primary, #6B3F69);
+  border-bottom: 4px solid var(--primary, #6B3F69);
+  border-left: 2px solid var(--secondary, #DDC3C3);
+  border-right: 2px solid var(--secondary, #DDC3C3);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1), 0 4px 10px rgba(0,0,0,0.05); /* extra depth */
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 6px 15px rgba(0,0,0,0.1);
+  border-top-color: var(--secondary, #DDC3C3);
+  border-bottom-color: var(--secondary, #DDC3C3);
+}
+
+.feature-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary, #6B3F69);
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.feature-card .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--primary, #6B3F69);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feature-card .btn:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Boxed Cards with Top/Bottom Borders */
+body.dark .feature-card {
+  background-color: #2b1f2b;
+  border-top: 4px solid #d9a7ff;
+  border-bottom: 4px solid #d9a7ff;
+  border-left: 2px solid #533052;
+  border-right: 2px solid #533052;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3), 0 4px 10px rgba(0,0,0,0.2);
+}
+
+body.dark .feature-card .btn {
+  background-color: #90caf9;
+  color: #000;
+}
+
+body.dark .feature-card .btn:hover {
+  background-color: #64b5f6;
+}
+
+
+</style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a class="logo" href="index.html">SootheWinds</a>
+    <div class="nav-links">
+      <a href="talk.html">Talk to Us</a>
+      <a href="mood.html">Track Mood</a>
+      <a href="stress.html">Stress Reliever</a>
+      <a href="login.html">Login / Sign Up</a>
+      <select class="lang-dropdown">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="es">Spanish</option>
+      <option value="fr">French</option>
+    </select>
+      <button class="theme-toggle">☀</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Relaxing Games 🎮</h1>
+    <p>Engage in mindful play to ease your stress and refresh your mind.</p>
+  </section>
+
+  <!-- Games Section -->
+<!-- Games Section -->
+<section class="features">
+  <div class="feature-card">
+    <h2>🧠 Memory Match</h2>
+    <p>Sharpen your mind by finding matching pairs. A calming brain exercise.</p>
+    <a href="memory.html" class="btn">Play Now</a>
+  </div>
+
+  <div class="feature-card">
+    <h2>🎶 Musical Wind Chimes</h2>
+    <p>Create soothing sounds by clicking to make chimes and notes float.</p>
+    <a href="musical.html" class="btn">Play Now</a>
+  </div>
+
+  <div class="feature-card">
+    <h2>🏖 Digital Sand Garden</h2>
+    <p>Draw calming patterns in the sand and relax your mind.</p>
+    <a href="sand.html" class="btn">Play Now</a>
+  </div>
+
+  <div class="feature-card">
+    <h2>🐹 Whack-A-Mole</h2>
+    <p>Test your reflexes and hit the moles as fast as you can!</p>
+    <a href="mole.html" class="btn">Play Now</a>
+  </div>
+</section>
+
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SootheWinds | Made with 💙 for students</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+ <!-- Hotline Button -->
+<!-- Hotline Button -->
+<div class="hotline-container">
+  <button class="hotline-btn" title="Emergency Hotline">📞</button>
+  <div class="hotline-popup">
+    <p>Call: +91 12345 67890</p>
+  </div>
+</div>
+
+</body>
+</html>
